@@ -8,7 +8,7 @@ $ composer require progpark/aliyun-mns-laravel
 ```
 将驱动注册到常用的 ServiceProvider 中：
 ```
-Queue::extend('mns', function() {
+Queue::extend('alimns', function() {
     return new \MainPHP\Laravel\Aliyun\MnsConnector();
 });
 ```
