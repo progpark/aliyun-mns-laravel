@@ -14,7 +14,7 @@
 namespace MainPHP\Laravel\Aliyun;
 
 use Illuminate\Queue\Connectors\ConnectorInterface;
-use Config;
+use Illuminate\Support\Facades\Config;
 use AliyunMNS\Client as MnsClient;
 use MainPHP\Laravel\Aliyun\MnsAdapter;
 use MainPHP\Laravel\Aliyun\MnsQueue;
