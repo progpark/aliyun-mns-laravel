@@ -65,14 +65,7 @@ class MnsJob extends Job implements JobContract
      */
     public function fire()
     {
-        $body = json_decode($this->getRawBody(), true);
-        if (!is_array($body)) {
-            throw new \InvalidArgumentException(
-                "Seems it's not a Laravel enqueued job. \r\n
-                [$body]"
-            );
-        }
-        $this->resolveAndFire($body);
+        parent::fire();
     }
 
     /**

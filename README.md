@@ -2,17 +2,17 @@
 组件为 Laravel 的队列增加 MNS 驱动，引入了 Aliyun MNS SDK。
 
 ## 安装使用
-通过 Composer 安装：
+首先，通过 Composer 安装扩展组件：
 ```
 $ composer require progpark/aliyun-mns-laravel
 ```
-将驱动注册到常用的 ServiceProvider 中：
+其次，在`app\Http\Providers\AppServiceProvider.php`中，将驱动注册到常用 ServiceProvider 中：
 ```
 Queue::extend('alimns', function() {
     return new \MainPHP\Laravel\Aliyun\MnsConnector();
 });
 ```
-之后在 config/queue.php 中增加 `alimns` 配置：
+最后、在 config/queue.php 中增加队列驱动 `alimns`：
 ```
 'connections' => [
     'redis' => [
@@ -22,13 +22,13 @@ Queue::extend('alimns', function() {
         'expire'     => 60,
     ],
 
-    // 新增阿里云 MNS。
+    // Aliyun MNS Driver
     'alimns'   => [
         'driver'   => 'alimns',
-        'key'      => env('MNS_ACCESS_KEY', 'access-key'),
-        'secret'   => env('MNS_SECRET_KEY', 'secret-key'),
-        'endpoint' => 'your-endpoint', // 外网连接必须启用 https
-        'queue'    => env('MNS_DEFAULT_QUEUE', 'default-queue-name'),
+        'queue'    => env('MNS_DEFAULT_QUEUE', ''),
+        'key'      => env('MNS_ACCESS_KEY', ''),
+        'secret'   => env('MNS_SECRET_KEY', ''),
+        'endpoint' => env('MNS_ENDPOINT', ''), // 外网连接必须启用 https
     ],
 ],
 ```
