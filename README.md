@@ -8,7 +8,7 @@ $ composer require progpark/aliyun-mns-laravel
 ```
 将驱动注册到常用的 ServiceProvider 中：
 ```
-Queue::extend('mns', function() {
+Queue::extend('alimns', function() {
     return new \MainPHP\Laravel\Aliyun\MnsConnector();
 });
 ```
@@ -33,8 +33,4 @@ Queue::extend('mns', function() {
 ],
 ```
 正常使用 Laravel Queue 即可：
-[[https://laravel-china.org/docs/5.3/queues](https://laravel-china.org/docs/5.3/queues)
-
-## 许可
-MIT
-
+[https://laravel-china.org/docs/5.3/queues](https://laravel-china.org/docs/5.3/queues)
