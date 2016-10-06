@@ -1,6 +1,6 @@
 # aliyun-mns-laravel
 
-该组件为 Laravel 的队列增加 MNS 驱动，引入了 Aliyun MNS SDK。
+该组件为 Laravel 5.3 的队列增加 MNS 驱动，引入了 Aliyun MNS SDK。
 
 ## 安装使用
 
