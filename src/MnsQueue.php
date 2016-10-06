@@ -54,6 +54,17 @@ class MnsQueue extends Queue implements QueueContract
     }
 
     /**
+     * Get the size of the queue.
+     *
+     * @param  string  $queue
+     * @return integer
+     */
+    public function size($queue = null)
+    {
+        // ...
+    }
+
+    /**
      * Push a new job onto the queue
      *
      * @param string $job
