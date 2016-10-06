@@ -33,7 +33,7 @@ Queue::extend('mns', function() {
 ],
 ```
 正常使用 Laravel Queue 即可：
-[[https://laravel-china.org/docs/5.3/queues](https://laravel-china.org/docs/5.3/queues)
+[https://laravel-china.org/docs/5.3/queues](https://laravel-china.org/docs/5.3/queues)
 
 ## 许可
 MIT
