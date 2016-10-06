@@ -12,7 +12,7 @@ Queue::extend('alimns', function() {
     return new \MainPHP\Laravel\Aliyun\MnsConnector();
 });
 ```
-最后、在 config/queue.php 中增加队列驱动 `alimns`：
+最后，在 config/queue.php 中增加队列驱动 `alimns`：
 ```
 'connections' => [
     'redis' => [
