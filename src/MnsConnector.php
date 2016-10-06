@@ -30,7 +30,7 @@ class MnsConnector implements ConnectorInterface
      */
     public function connect(array $config)
     {
-        $config = Config::get('queue.connections.mns');
+        $config = Config::get('queue.connections.alimns');
 
         return new MnsQueue(
             new MnsAdapter(new MnsClient($config['endpoint'], $config['key'], $config['secret']), $config['queue'])
