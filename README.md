@@ -1,12 +1,5 @@
 # aliyun-mns-laravel
-
-[![StyleCI PSR2](https://styleci.io/repos/57226401/shield)](https://styleci.io/repos/57226401)
-[![Build Status](https://travis-ci.org/abrahamgreyson/laravel-mns.svg?branch=master)](https://travis-ci.org/abrahamgreyson/laravel-mns)
-[![Code Coverage](https://scrutinizer-ci.com/g/abrahamgreyson/laravel-mns/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/abrahamgreyson/laravel-mns/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/abe/laravel-mns/v/stable)](https://packagist.org/packages/abe/laravel-mns)
-[![License](https://img.shields.io/badge/license-MIT-000000.svg)](https://packagist.org/packages/abe/laravel-mns)
-
-组件是为 Laravel 的队列增加 MNS 驱动，引入了 Aliyun MNS SDK。
+组件为 Laravel 的队列增加 MNS 驱动，引入了 Aliyun MNS SDK。
 
 ## 安装使用
 通过 Composer 安装：
@@ -40,7 +33,7 @@ Queue::extend('mns', function() {
 ],
 ```
 正常使用 Laravel Queue 即可：
-[https://laravel.com/docs/5.3/queues](https://laravel.com/docs/5.3/queues)
+[[https://laravel-china.org/docs/5.3/queues](https://laravel-china.org/docs/5.3/queues)
 
 ## 许可
 MIT
