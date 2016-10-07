@@ -11,7 +11,7 @@ $ composer require progpark/aliyun-mns-laravel
 
 其次，在 app\Http\Providers\AppServiceProvider.php 中，将驱动注册到常用 ServiceProvider 中：
 ```
-Queue::extend('alimns', function() {
+\Queue::extend('alimns', function() {
     return new \MainPHP\Laravel\Aliyun\MnsConnector();
 });
 ```
@@ -31,7 +31,7 @@ Queue::extend('alimns', function() {
         'driver'   => 'alimns',
         'queue'    => env('MNS_DEFAULT_QUEUE', ''),
         'key'      => env('MNS_ACCESS_KEY', ''),
-        'secret'   => env('MNS_SECRET_KEY', ''),
+        'secret'   => env('MNS_ACCESS_SECRET', ''),
         'endpoint' => env('MNS_ENDPOINT', ''), // 外网连接必须启用 https
     ],
 ],
