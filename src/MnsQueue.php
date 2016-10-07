@@ -17,6 +17,7 @@ use AliyunMNS\Exception\MessageNotExistException;
 use AliyunMNS\Requests\SendMessageRequest;
 use Illuminate\Contracts\Queue\Queue as QueueContract;
 use Illuminate\Queue\Queue;
+use MainPHP\Laravel\Aliyun\MnsJob;
 
 class MnsQueue extends Queue implements QueueContract
 {
@@ -138,7 +139,7 @@ class MnsQueue extends Queue implements QueueContract
             if ($this->jobCreator) {
                 return call_user_func($this->jobCreator, $this->container, $queue, $response);
             } else {
-                return new Jobs\MnsJob($this->container, $this->mns, $queue, $response);
+                return new MnsJob($this->container, $this->mns, $queue, $response);
             }
         }
 
